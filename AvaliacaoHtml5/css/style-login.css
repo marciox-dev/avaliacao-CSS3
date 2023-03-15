@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;500;800&display=swap');
+
+* {
+    font-family: 'Mukta', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    /*unidade Vh é a altura do viewport, permitindo que o body defina um valor mínimo de altura com base na altura total do viewport do usuário*/
+background-color: white;
+}
+
+:root {
+    --minha-cor-back-clear: #bae6f6;
+    --cor-da-empresa: #203A43;
+}
+
+/*começando a estilização do header NAVBAR*/
+
+.cabecalho {
+    width: 100%;
+    background-image: url(https://img.lovepik.com/background/20211021/small/lovepik-blue-background-of-science-and-technology-image_500486349.jpg);
+}
+
+.menu {
+    display: flex;
+    text-shadow: 2px 2px #203A43;
+    justify-content: flex-end;
+}
+
+.menu .ul-menu {
+    display: flex;
+
+    align-items: center;
+}
+
+.ul-menu li {
+    list-style: none;
+    padding: 2rem;
+    color: white;
+}
+
+.bi-person-circle {
+    font-size: 60px;
+    color: var(--minha-cor-back-clear);
+    margin-right: 3rem;
+}
+
+.bi-geo-alt {
+    font-size: 60px;
+    color: var(--minha-cor-back-clear);
+    padding-right: .8rem;
+}
+
+.nome-localizacao {
+    font-size: 40px;
+    color: var(--minha-cor-back-clear);
+    padding-left: 0;
+    padding-right: 5rem;
+}
+
+.bi-card-image {
+    font-size: 60px;
+    color: var(--minha-cor-back-clear);
+}
+
+#imagem-localizacao {
+    display: flex;
+    align-items: center;
+}
+
+/* estilização da seção Login */
+section form{
+    align-content: center;
+    align-items: center;
+    background-color:var(--minha-cor-back-clear);
+}
+
+form{
+    border: 1px solid black;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+form img{
+    width: 40%;
+
+    text-align: center;
+    align-items: center;
+}
+form h1{
+    text-align: center;
+    display: block;
+}
+
+form input[type=text],
+form input[type=password] {
+    width: 40%;
+    height: 20px;
+    border: 1px solid var(--minha-cor-back-clear);
+    padding-left: 10px;
+}
+
+
+/*estilização do footer*/
+.footer {
+    background-color: var(--minha-cor-back-clear);
+    margin-top: 0;
+}
+
+.footer-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.footer-card a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.footer-card li {
+    list-style: none;
+}
+
+.footer-item {
+    margin: .5rem;
+}
+
+i.bi-house {
+    font-size: 60px;
+    color: var(--cor-da-empresa);
+}
+
+i.bi-emoji-smile {
+    font-size: 60px;
+    color: var(--cor-da-empresa);
+}
+
+i.bi-upc-scan {
+    font-size: 60px;
+    color: var(--cor-da-empresa);
+}
+
+i.bi-cart {
+    font-size: 60px;
+    color: var(--cor-da-empresa);
+}
+
+i.bi-stickies {
+    font-size: 60px;
+    color: var(--cor-da-empresa);
+}
+
+.nome-item-footer {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4A00E0;
+}
+/* usando media query para deixar a pagae acessível em telas menores */
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+    }
+
+    i.bi-geo-alt,
+    .nome-localizacao,
+    i.bi-card-image {
+        display: none;
+    }
+
+    ul.footer-card {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .footer-card a {
+        width: 100%;
+    }
+
+    i.bi-search {
+        position: absolute;
+        margin-right: 3rem;
+        padding-left: 2rem;
+    }
+
+    #categoria-ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #cards-produtos {
+        flex-wrap: wrap;
+    }
+
+    div.card-produto {
+        width: 100%;
+    }
+
+    span#frase-avaliacao {
+        display: none;
+    }
+}
